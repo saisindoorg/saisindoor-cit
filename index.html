@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portfolio</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f8;
+      color: #202020;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .hero {
+      background: #142442;
+      color: white;
+      text-align: center;
+      padding: 46px 20px 48px;
+    }
+
+    .hero h1 {
+      font-size: 3.4rem;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 1.8rem;
+    }
+
+    /* Main */
+    .container {
+      width: 92%;
+      max-width: 900px;
+      margin: 48px auto;
+    }
+
+    /* Cards */
+    .card {
+      background: white;
+      border-radius: 28px;
+      padding: 42px 44px;
+      margin-bottom: 44px;
+      box-shadow: 0 7px 22px rgba(20, 36, 66, 0.08);
+    }
+
+    /* Profile */
+    .profile-image {
+  width: 265px;
+  height: 265px;
+  max-width: 75vw;
+  max-height: 75vw;
+  margin: 4px auto 55px;
+  border-radius: 50%;
+  border: 8px solid #e8edf5;
+  object-fit: cover;
+  display: block;
+}
+
+    /* Empty image slot */
+    .profile-image {
+      width: 265px;
+      height: 265px;
+      max-width: 75vw;
+      max-height: 75vw;
+      margin: 4px auto 55px;
+
+      border-radius: 50%;
+      border: 8px solid #e8edf5;
+
+      background: white;
+
+      /*
+        ADD YOUR IMAGE LATER:
+
+        background-image: url("myphoto.jpg");
+        background-size: cover;
+        background-position: center;
+      */
+    }
+
+    .profile h2 {
+      color: #142442;
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .profile-info {
+      font-size: 1.3rem;
+      line-height: 1.8;
+    }
+
+    /* Section headings */
+    .section-title {
+      color: #142442;
+      font-size: 2.7rem;
+      margin-bottom: 18px;
+    }
+
+    .divider {
+      height: 3px;
+      background: #e5e9ee;
+      margin-bottom: 28px;
+    }
+
+    .about-text,
+    .goal-text,
+    .project-description,
+    .contact-text {
+      font-size: 1.25rem;
+    }
+
+    /* Skills */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .skill {
+      background: #e9eef6;
+      border-radius: 30px;
+      padding: 10px 27px;
+      font-size: 1.2rem;
+    }
+
+    /* Education */
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1.15rem;
+    }
+
+    th {
+      background: #142442;
+      color: white;
+      text-align: left;
+      padding: 18px 20px;
+    }
+
+    td {
+      padding: 22px 20px;
+      border-bottom: 1px solid #d9dde3;
+      vertical-align: top;
+    }
+
+    /* Project */
+    .project-title {
+      font-size: 1.65rem;
+      margin-bottom: 5px;
+    }
+
+    .technologies {
+      margin-top: 4px;
+      font-size: 1.2rem;
+    }
+
+    /* Contact */
+    .contact-button {
+      display: inline-block;
+      margin-top: 22px;
+      background: #142442;
+      color: white;
+      text-decoration: none;
+      padding: 14px 38px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+    }
+
+    .contact-button:hover {
+      background: #20385f;
+    }
+
+    /* Footer */
+    footer {
+      background: #142442;
+      color: white;
+      text-align: center;
+      padding: 38px 20px;
+      font-size: 1.2rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 42px 16px 48px;
+      }
+
+      .hero h1 {
+        font-size: 2.7rem;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+      }
+
+      .container {
+        width: 90%;
+        margin: 38px auto;
+      }
+
+      .card {
+        border-radius: 27px;
+        padding: 34px 44px;
+        margin-bottom: 42px;
+      }
+
+      .profile-image {
+        width: 265px;
+        height: 265px;
+        margin-bottom: 54px;
+      }
+
+      .profile h2 {
+        font-size: 2.5rem;
+      }
+
+      .profile-info {
+        font-size: 1.25rem;
+      }
+
+      .section-title {
+        font-size: 2.3rem;
+      }
+
+      .about-text,
+      .goal-text,
+      .project-description,
+      .contact-text {
+        font-size: 1.18rem;
+      }
+
+      .skill {
+        font-size: 1.15rem;
+        padding: 9px 25px;
+      }
+
+      table {
+        min-width: 560px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="hero">
+    <h1>Student Portfolio</h1>
+    <p>Aspiring Full Stack Java Developer</p>
+  </header>
+
+
+  <main class="container">
+
+    <!-- PROFILE -->
+    <section class="card profile">
+
+      <!-- EMPTY IMAGE SLOT -->
+      <img src="WhatsApp Image 2026-09-30 at 12.05.21 PM.jpeg" alt="profile Photo" class="profile-image">
+
+      <h2>SAI SINDOOR G</h2>
+
+      <div class="profile-info">
+
+        <p>
+          <strong>Branch:</strong>
+          Computer Science &amp; Engineering
+        </p>
+
+        <p>
+          <strong>Semester:</strong>
+          5th Semester
+        </p>
+
+        <p>
+          <strong>College:</strong>
+          Cambridge Institute of Technology
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          saisindoorg@gmail.com
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ABOUT ME -->
+    <section class="card">
+
+      <h2 class="section-title">
+        About Me
+      </h2>
+
+      <div class="divider"></div>
+
+      <p class="about-text">
+        I am a Computer Science student passionate about
+        software development and emerging technologies.
+        Currently, I am learning Java, Python, SQL,
+        Data Structures and Full Stack Development.
+      </p>
+
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section class="card">
+
+      <h2 class="section-title">
+        Technical Skills
+      </h2>
+
+      <div class="divider"></div>
+
+      <div class="skills">
+
+        <span class="skill">Java</span>
+        <span class="skill">Python</span>
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">SQL</span>
+        <span class="skill">Data Structures</span>
+
+      </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="card">
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <div class="divider"></div>
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>Qualification</th>
+              <th>Institution</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>
+                B.E.<br>
+                Computer Science
+              </td>
+
+              <td>
+                Cambridge Institute of Technology<br>
+                North Campus
+              </td>
+
+              <td>
+                2027
+              </td>
+            </tr>
+
+            <tr>
+              <td>PUC</td>
+              <td>XYZ College</td>
+              <td>2023</td>
+            </tr>
+
+            <tr>
+              <td>SSLC</td>
+              <td>XYZ High School</td>
+              <td>2021</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROJECT -->
+    <section class="card">
+
+      <h2 class="section-title">
+        My Project
+      </h2>
+
+      <div class="divider"></div>
+
+      <h3 class="project-title">
+        Student Management System
+      </h3>
+
+      <p class="project-description">
+        A simple application designed to manage student
+        information, attendance and academic records.
+      </p>
+
+      <p class="technologies">
+        <strong>Technologies:</strong>
+        Java, SQL, HTML, CSS
+      </p>
+
+    </section>
+
+
+    <!-- CAREER GOAL -->
+    <section class="card">
+
+      <h2 class="section-title">
+        Career Goal
+      </h2>
+
+      <div class="divider"></div>
+
+      <p class="goal-text">
+        My goal is to become a skilled Full Stack Java
+        Developer and build useful real-world software
+        applications.
+      </p>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="card">
+
+      <h2 class="section-title">
+        Contact Me
+      </h2>
+
+      <div class="divider"></div>
+
+      <p class="contact-text">
+        Interested in connecting with me?
+      </p>
+
+      <a
+        class="contact-button"
+        href="mailto:rahul@gmail.com"
+      >
+        Contact Me
+      </a>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 Rahul Kumar | Student Portfolio
+    </p>
+
+    <p>
+      Learning Today • Building Tomorrow
+    </p>
+
+  </footer>
+
+</body>
+</html>
